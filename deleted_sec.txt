@@ -1,0 +1,152 @@
+<!-- <div class="alignMent" align="center" id="alignment">
+            <div class="sec_nav" align="center">
+                <div id="cat">All Category▼
+                    <form action="Inner_pages\catagory\index.html">
+
+                        <input type="submit" class="catl" value="Mobile">
+                        <input type="submit" class="catl" value="For Man">
+                        <input type="submit" class="catl" value="For Woman">
+                    </form>
+
+                </div>
+
+                <div class="input">
+
+                    <input type="text" name="search" id="search" placeholder="Search Category" autocomplete="off">
+                    <button id="srcbtn" onclick="search()">Search</button>
+                    <div id="items">
+                        <div class="i_list">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9Ct6Um0QP0now-FvtIncSpbqDwfdb5AH0O0BmvLsxIIU8pFXuOKA0xDep6_onOQddfo&usqp=CAU"
+                                alt="">
+                            <h2>Smart Watch</h2>
+                        </div>
+                        <div class="i_list">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQiWcAMcrUOWTSQo786XWaZhejeoGb3w--tg&usqp=CAU"
+                                alt="">
+                            <h2>T-shirt</h2>
+                        </div>
+                        <div class="i_list">
+                            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-finish-select-202207-purple_FMT_WHH?wid=1280&hei=492&fmt=p-jpg&qlt=80&.v=1662150034211"
+                                alt="">
+                            <h2>Smart Watch</h2>
+                        </div>
+                        <div class="i_list">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9Ct6Um0QP0now-FvtIncSpbqDwfdb5AH0O0BmvLsxIIU8pFXuOKA0xDep6_onOQddfo&usqp=CAU"
+                                alt="">
+                            <h2>Smart Watch</h2>
+                        </div>
+                        <div class="i_list">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9Ct6Um0QP0now-FvtIncSpbqDwfdb5AH0O0BmvLsxIIU8pFXuOKA0xDep6_onOQddfo&usqp=CAU"
+                                alt="">
+                            <h2>Smart Watch</h2>
+                        </div>
+                        <div class="i_list">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9Ct6Um0QP0now-FvtIncSpbqDwfdb5AH0O0BmvLsxIIU8pFXuOKA0xDep6_onOQddfo&usqp=CAU"
+                                alt="">
+                            <h2>Smart Watch</h2>
+                        </div>
+                        <div class="i_list">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9Ct6Um0QP0now-FvtIncSpbqDwfdb5AH0O0BmvLsxIIU8pFXuOKA0xDep6_onOQddfo&usqp=CAU"
+                                alt="">
+                            <h2>Smart Watch</h2>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                
+
+
+            </div>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+javascript
+---------------
+
+
+
+
+
+
+
+
+
+let images=[["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9Ct6Um0QP0now-FvtIncSpbqDwfdb5AH0O0BmvLsxIIU8pFXuOKA0xDep6_onOQddfo&usqp=CAU","Smart Watch"],
+["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQiWcAMcrUOWTSQo786XWaZhejeoGb3w--tg&usqp=CAU","T-shirt"],
+["https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-finish-select-202207-purple_FMT_WHH?wid=1280&hei=492&fmt=p-jpg&qlt=80&.v=1662150034211","I-phone Mobile"],
+["https://m.media-amazon.com/images/I/61GA2mAD4KL._SX522_.jpg","Android Phone Mobile"],
+["https://static.toiimg.com/thumb/msid-86937496,width-1280,resizemode-4/86937496.jpg","guiter"],
+["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9NmlMUB5-HUObkT31UsLMEwmIeI_Xs0maHA&usqp=CAU","Computer/Pc"],
+["https://5.imimg.com/data5/SELLER/Default/2021/5/RI/NW/BQ/1756364/cricket-jersey-t-shirt-500x500.jpg","T-shirt"]
+]
+
+let items=document.getElementsByClassName("i_list");
+let btn3=document.getElementById("srcbtn");
+let srcBar=document.getElementById("search")
+
+for(let i=0;i<items.length;i++){
+    let getImg=items[i].getElementsByTagName("img")[0];
+    let getTxt=items[i].getElementsByTagName("h2")[0];
+    getImg.src=images[i][0];
+    getTxt.textContent=images[i][1];
+}
+
+btn3.addEventListener("click",search);
+
+
+function search(){
+    let items=document.getElementsByClassName("i_list");
+    let srcBar=document.getElementById("search").value.toUpperCase();
+
+    for(let i=0;i<items.length;i++){
+        let tag=items[i].getElementsByTagName("h2")[0];
+        if(tag){
+            let tagName=tag.innerHTML || tag.textContent;
+            if(tagName.toUpperCase().indexOf(srcBar)>-1){
+                    items[i].style.display=""
+            }else{
+                items[i].style.display="none";
+            }
+            
+        }
+    }
+
+
+}
+
+
+let item_lists=document.getElementById("items");
+item_lists.style.display="none";
+
+let n=1;
+
+srcBar.addEventListener("click",()=>{
+    n=n+1;
+    if(n%2==0){
+        item_lists.style.display="";
+    }
+    else{
+        item_lists.style.display="none";
+        srcBar.value="";
+    }
+})
+
+
+
+
+//Todays deals setting randomly every day
+let box1=document.getElementById("box1");
+let box2=document.getElementById("box2");
+let box3=document.getElementById("box3");

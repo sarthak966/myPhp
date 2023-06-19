@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sec1{
+    /* border: 2px solid black; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    /* box-shadow: 10px 50px 90px 0px rgb(87, 84, 84); */
+}
+
+.secdiv{
+    position: relative;
+    border-bottom: 5px solid rgb(219, 217, 217);
+    width: 99.8vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    /* width: 50vh; */
+    align-self: center;
+    /* width: 40%; */
+    overflow: hidden;
+
+
+}
+.image{
+    height: 100%;
+    /* border: 2px solid aqua; */
+    width: 50%;
+}
+
+
+#nxt{
+    position: absolute;
+    top:50%;
+    right: 10%;
+    width: 5%;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    height: 25%;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+#nxt:hover{
+    background-color: rgb(238, 194, 112) ;
+}
+
+#pvs{
+    position: absolute;
+    top:50%;
+    left: 10%;
+    width: 5%;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    height: 25%;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+#pvs:hover{
+    background-color:  rgb(238, 194, 112);
+}
+
+.sec2A{
+    display: flex;
+    /* align-self: center; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    /* min-width:50vw ;
+    max-width: 80vw; */
+}
+
+
+.sec2{
+    /* border: 2px solid black; */
+    margin: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+    height: 30vh;
+    justify-content: space-around;
+    /* border: 2px solid gray; */
+    min-width: 30vw;
+    text-align: center;
+    box-shadow: 0px 0px 10px 10px gray;
+}
+
+
+
+.buybtn{
+    background-color: orange;
+    height: 30vh;
+    width: 30vw;
+    align-self: center;
+    
+    transition-duration: 0.2s;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    
+    color: white;
+    font-size:1.3rem;
+    font-weight: bold;
+    box-shadow: 10px 0px 10px 10px gray;
+    cursor: pointer;
+}
+
+
+.buybtn:hover{
+    background-color: rgb(238, 194, 112);
+}
+
+
+.cf{
+   
+   display: flex;
+   position: relative;
+   align-items: center;
+   justify-content: center;
+   height: 10vh; 
+}
+
+.c{
+    border: none;
+    /* margin-top: 5vh; */
+    /* margin-bottom: 3vh; */
+    position: relative;
+    padding: 0vw 2vw;
+    border-bottom: 2px solid black;
+    width: 65%;
+    height: 50%;
+}
+.pbtn{
+    background-color: rgb(35, 238, 99);
+    width: 7%;
+    height: 50%;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+}
+
+
+#rttng{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    position: relative;
+}
+
+.i_rt{
+    /* border: 2px solid black; */
+    width: 50%;
+}
+
+.cts{
+    margin: 2vh 0;
+    /* background-color: rgb(187, 236, 247); */
+    height: 10vh;
+    color:rgb(90, 88, 88);
+    border: 2px solid silver;
+    padding: 0.5vh 1vw;
+    /* text-align: center; */
+
+}

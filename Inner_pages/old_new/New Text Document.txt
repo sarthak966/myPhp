@@ -1,0 +1,89 @@
+for(let i=0;i<catagories.length;i++){
+    catagories[i].addEventListener("click",()=>{
+        //choosing products
+        let cat = catagories[i].innerHTML.toUpperCase();
+        console.log(cat)
+            for (let i = 0; i < newProduct.length; i++) {
+                let items = document.getElementsByClassName("box");
+                let tag = newProduct[i][8];
+                
+                // console.log(tag.toUpperCase());
+                if (tag) {
+                    console.log(tag.toUpperCase())
+                    if (tag.toUpperCase().indexOf(cat) > -1) {
+                        items[i].style.display = ""
+                        console.log(tag.toUpperCase().indexOf(cat))
+                    } else {
+                        items[i].style.display = "none";
+                        console.log(tag.toUpperCase().indexOf(cat))
+                    }
+
+                }
+            }
+
+
+
+
+
+
+        
+
+
+
+    })
+
+}
+
+
+
+
+
+//filter by contition
+
+//new filter
+
+let newC=document.getElementById("new")
+newC.addEventListener("click",()=>{
+    for (let i = 0; i < newProduct.length; i++) {
+        let items = document.getElementsByClassName("box");
+        let condition = newProduct[i][4];
+        
+        // console.log(tag.toUpperCase());
+        if (condition) {
+            // console.log(tag.toUpperCase())
+            if (condition.toUpperCase()==="NEW") {
+                items[i].style.display = ""
+                
+            } else {
+                items[i].style.display = "none";
+                
+            }
+
+        }
+    }
+})
+
+
+//old filter
+
+let oldC=document.getElementById("old");
+
+oldC.addEventListener("click",()=>{
+    for (let i = 0; i < newProduct.length; i++) {
+        let items = document.getElementsByClassName("box");
+        let condition = newProduct[i][4];
+        
+        // console.log(tag.toUpperCase());
+        if (condition) {
+            // console.log(tag.toUpperCase())
+            if (condition.toUpperCase()==="OLD") {
+                items[i].style.display = ""
+                
+            } else {
+                items[i].style.display = "none";
+                
+            }
+
+        }
+    }
+})

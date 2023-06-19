@@ -1,0 +1,28 @@
+<div class="sec2">
+        <div id="sec_hed">
+            <h1 class="sec_h" style="color:rgb(85, 81, 81);">We improve daily through your ratings </h1>
+        </div>
+
+        
+
+        <!--Boxes of random stuffs-->
+
+        <div class="stuff" id="deals">
+            <form action="https://formsubmit.co/d3eaf16d9507316a27c1523d38422bf3" method="POST" id="inputs" class="form">
+                <input type="text" name="name" id="name" class="inputr" placeholder="Enter Your Name" autocomplete="off" required>
+                
+
+                <input type="email" name="email" id="email" class="inputr" placeholder="Enter Your Email adress" autocomplete="off" required>
+                
+                
+                <input type="text" name="Confession from customar"  id="ratings" class="inputr" placeholder="Write you valuable Words" required>
+                
+
+                <input type="hidden" name="_subject" value="Product Rating">
+                <br/>
+                <input type="submit" value="Submit ratings" id="submitbtn" align="center">
+            </form>
+            </div>
+
+
+        </div>
